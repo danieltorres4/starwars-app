@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
-        tools:text="Name" />
+        tools:text="@string/name_hint" />
 
 
     <TextView
@@ -58,7 +58,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/press_start_2p"
         android:includeFontPadding="false"
-        tools:text="Height"
+        tools:text="@string/height_hint"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/guideline5"
@@ -75,7 +75,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/press_start_2p"
         android:includeFontPadding="false"
-        tools:text="Birthday"
+        tools:text="@string/birthday_hint"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +92,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/press_start_2p"
         android:includeFontPadding="false"
-        tools:text="Gender"
+        tools:text="@string/gender_hint"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
