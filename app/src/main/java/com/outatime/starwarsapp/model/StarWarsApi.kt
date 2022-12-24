@@ -7,8 +7,8 @@ import retrofit2.http.Url
 
 interface StarWarsApi {
     //END POINTS
-    @GET
-    fun getCharacters(@Url url: String?): Call<ArrayList<Character>>
+    @GET("api/people/")
+    fun getCharacters(): Call<People>
 
     @GET("api/people/{count}")
     fun getCharacterDetail(@Path("count") count: Int?): Call<CharacterDetail>

@@ -5,4 +5,5 @@
     <string name="height_hint">Height</string>
     <string name="birthday_hint">Birthday</string>
     <string name="gender_hint">Gender</string>
+    <string name="position_hint">Position</string>
 </resources>
