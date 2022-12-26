@@ -1,5 +1,6 @@
 package com.outatime.starwarsapp.view.activities
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,11 +19,15 @@ import retrofit2.Response
 
 class CharacterDetails : AppCompatActivity() {
     private lateinit var binding: ActivityCharacterDetailsBinding
+    private lateinit var mp: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityCharacterDetailsBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        mp = MediaPlayer.create(this@CharacterDetails, R.raw.sw2)
+        mp.start()
 
         val bundle = intent.extras
 
@@ -91,5 +96,15 @@ class CharacterDetails : AppCompatActivity() {
 
             })
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mp.pause()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        mp.start()
     }
 }
