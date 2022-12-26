@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.outatime.starwarsapp.R
 import com.outatime.starwarsapp.databinding.CharacterElementBinding
 import com.outatime.starwarsapp.model.People
 import com.outatime.starwarsapp.util.Constants
