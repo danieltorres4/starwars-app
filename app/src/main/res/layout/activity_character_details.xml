@@ -38,14 +38,15 @@
                     android:textSize="25sp"
                     tools:text="@string/name_hint" />
 
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/ivImage"
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lavLaugh"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:lottie_rawRes="@raw/laugh"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    app:riv_corner_radius="10dp"
-                    tools:src="@mipmap/ic_launcher" />
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
 
                 <TextView
                     android:id="@+id/tvHeight_Details"
