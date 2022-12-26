@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">StarWarsApp</string>
+    <string name="app_version">Version 1</string>
     <string name="base_url">https://swapi.dev/api/</string>
     <string name="name_hint">Name</string>
     <string name="height_hint">Height</string>
     <string name="birthday_hint">Birthday</string>
     <string name="gender_hint">Gender</string>
     <string name="position_hint">Position</string>
+    <string name="planet_hint">Planet</string>
+    <string name="films_hint">Films</string>
+    <string name="successful_message">Successful Connection</string>
+    <string name="failure_message">Failure Connection: %s</string>
+    <string name="tv_result_height">Height: %s cm</string>
+    <string name="tv_result_birthday">Birthday: %s</string>
+    <string name="tv_result_gender">Gender: %s</string>
+    <string name="tv_result_planet_name">Planet\'s Name: %s</string>
+    <string name="tv_result_films">Films</string>
 </resources>

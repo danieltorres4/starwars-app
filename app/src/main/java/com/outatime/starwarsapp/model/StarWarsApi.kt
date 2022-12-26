@@ -10,6 +10,18 @@ interface StarWarsApi {
     @GET("api/people/")
     fun getCharacters(): Call<People>
 
-    @GET("api/people/{count}")
+    @GET("api/people/{count}/")
     fun getCharacterDetail(@Path("count") count: Int?): Call<CharacterDetail>
+
+    @GET("api/planets/")
+    fun getPlanets(): Call<Planet>
+
+    @GET("api/planets/{planetCount}")
+    fun getPlanetDetail(@Path("planetCount") count: Int?): Call<PlanetDetails>
+
+    @GET("api/films/")
+    fun getFilms(): Call<Movie>
+
+    @GET("api/films/{filmCount}")
+    fun getFilmDetails(@Path("filmCount") count: Int?): Call<Movie>
 }

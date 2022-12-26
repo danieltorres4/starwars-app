@@ -6,9 +6,12 @@ data class CharacterDetail(
     @SerializedName("name")
     var name: String? = null,
 
-    @SerializedName("homeworld")
-    var homeWorld: String? = null,
+    @SerializedName("height")
+    var height: String? = null,
 
-    @SerializedName("films")
-    var films: ArrayList<Movie>
+    @SerializedName("birth_year")
+    var birthday: String? = null,
+
+    @SerializedName("gender")
+    var gender: String? = null
 )

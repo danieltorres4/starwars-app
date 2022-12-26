@@ -1,15 +1,16 @@
 package com.outatime.starwarsapp.view.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.outatime.starwarsapp.R
 import com.outatime.starwarsapp.databinding.ActivityMainBinding
 import com.outatime.starwarsapp.model.StarWarsApi
 import com.outatime.starwarsapp.util.Constants
-import com.outatime.starwarsapp.model.Character
 import com.outatime.starwarsapp.model.People
 import com.outatime.starwarsapp.view.adapters.Adapter
 import kotlinx.coroutines.CoroutineScope
@@ -32,9 +33,9 @@ class MainActivity : AppCompatActivity() {
 
             call.enqueue(object: Callback<People> {
                 override fun onResponse(call: Call<People>, response: Response<People>) {
-                    Log.d(Constants.LOGTAG, "Server response: ${response.toString()}")
-                    Log.d(Constants.LOGTAG, "Data: ${response.body().toString()}")
-                    Toast.makeText(this@MainActivity, "Successful Connection!", Toast.LENGTH_LONG).show()
+                    //Log.d(Constants.LOGTAG, "Server response: ${response.toString()}")
+                    //Log.d(Constants.LOGTAG, "Data: ${response.body().toString()}")
+                    Toast.makeText(this@MainActivity, R.string.successful_message, Toast.LENGTH_LONG).show()
 
                     binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
                     binding.rvMenu.adapter = Adapter(this@MainActivity, response.body()!!)
@@ -44,8 +45,7 @@ class MainActivity : AppCompatActivity() {
 
                 override fun onFailure(call: Call<People>, t: Throwable) {
                     binding.pbConnection.visibility = View.GONE
-                    Toast.makeText(this@MainActivity, "Failure Connection! ${t.message}", Toast.LENGTH_LONG).show()
-                    print("\n\nFailure Connection! ${t.message} \n\n")
+                    Toast.makeText(this@MainActivity, getString(R.string.failure_message, t.message), Toast.LENGTH_LONG).show()
                 }
 
             })
@@ -54,7 +54,19 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun selectedCharacter(result: People) {
-        //Click of every element of the recycler view
+    fun selectedCharacter(people: People, position: Int) {
+        //Every click
+        val parameters = Bundle()
+
+        parameters.apply {
+            putString("name", people.results[position].name)
+        }
+
+        val intent = Intent(this@MainActivity, CharacterDetails::class.java)
+        intent.putExtras(parameters)
+
+        startActivity(intent)
     }
+
+
 }

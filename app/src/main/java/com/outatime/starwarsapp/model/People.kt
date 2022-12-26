@@ -11,5 +11,7 @@ class Result(
     val birth_year: String,
     val gender: String,
     val height: String,
-    val name: String
+    val name: String,
+    val homeworld: String,
+    //val films: ArrayList<Movie>
 )
