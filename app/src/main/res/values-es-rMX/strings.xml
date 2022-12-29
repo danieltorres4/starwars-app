@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_version">Versión 1.0.0</string>
+    <string name="alert_dialog_title">Consejo</string>
+    <string name="alert_dialog_msg">Si deseas ver más detalles sobre el planeta, mantén presionado en el nombre del planeta y luego suelta. Después, oprime un detalle para ver su valor</string>
+    <string name="name_hint">Nombre</string>
+    <string name="height_hint">Peso</string>
+    <string name="birthday_hint">Cumpleaños</string>
+    <string name="gender_hint">Género</string>
+    <string name="position_hint">Posición</string>
+    <string name="planet_hint">Planeta</string>
+    <string name="films_hint">Películas</string>
+    <string name="successful_message">Conexión Exitosa</string>
+    <string name="failure_message">Conexión Fallida: %s</string>
+    <string name="tv_result_height">Altura: %s</string>
+    <string name="tv_result_birthday">Cumpleaños: %s</string>
+    <string name="tv_result_gender">Género: %s</string>
+    <string name="tv_result_planet_name">Nombre del Planeta: %s</string>
+    <string name="tv_result_films">Películas</string>
+    <string name="climate">Clima</string>
+    <string name="diameter">Diámetro</string>
+    <string name="orbital_period">Periodo Orbital</string>
+    <string name="population">Número de Habitantes</string>
+    <string name="rotation_period">Periodo de Rotación</string>
+    <string name="terrain">Terreno</string>
+    <string name="movie_title">Título: %s</string>
+    <string name="movie_episode_id">Película: %d</string>
+    <string name="movie_release_date">Fecha: %s</string>
+    <string name="appears_in_movie">Este personaje aparece en la película</string>
+    <string name="does_not_appear_in_movie">Este personaje no aparece en la película</string>
+</resources>

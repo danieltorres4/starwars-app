@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">StarWarsApp</string>
+    <string name="app_name" translatable="false">StarWarsApp</string>
     <string name="app_version">Version 1.0.0</string>
-    <string name="base_url">https://swapi.dev/api/</string>
+    <string name="base_url" translatable="false">https://swapi.dev/api/</string>
     <string name="alert_dialog_title">Tip</string>
-    <string name="alert_dialog_positive_response">OK</string>
-    <string name="alert_dialog_msg">If you wanna see some planet details, keep pressed and then release it</string>
+    <string name="alert_dialog_positive_response" translatable="false">OK</string>
+    <string name="alert_dialog_msg">If you wanna see some planet details, keep pressed and then release it. Then touch a detail to see the value</string>
     <string name="name_hint">Name</string>
     <string name="height_hint">Height</string>
     <string name="birthday_hint">Birthday</string>
@@ -28,8 +28,8 @@
     <string name="movie_title">Title: %s</string>
     <string name="movie_episode_id">Movie: %d</string>
     <string name="movie_release_date">Date: %s</string>
-    <string name="movie_director">Director: %s</string>
-    <string name="sw_plus_title">Star Wars: %s</string>
+    <string name="movie_director" translatable="false">Director: %s</string>
+    <string name="sw_plus_title" translatable="false">Star Wars: %s</string>
     <string name="appears_in_movie">This character appears in the movie!</string>
     <string name="does_not_appear_in_movie">This character does not appear!</string>
 </resources>
