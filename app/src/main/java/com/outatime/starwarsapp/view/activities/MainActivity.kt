@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<People>, response: Response<People>) {
                     //Log.d(Constants.LOGTAG, "Server response: ${response.toString()}")
                     //Log.d(Constants.LOGTAG, "Data: ${response.body().toString()}")
-                    Toast.makeText(this@MainActivity, R.string.successful_message, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@MainActivity, R.string.successful_message, Toast.LENGTH_SHORT).show()
 
                     binding.rvMenu.layoutManager = LinearLayoutManager(this@MainActivity)
                     binding.rvMenu.adapter = Adapter(this@MainActivity, response.body()!!)

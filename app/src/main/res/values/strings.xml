@@ -13,7 +13,7 @@
     <string name="planet_hint">Planet</string>
     <string name="films_hint">Films</string>
     <string name="successful_message">Successful Connection</string>
-    <string name="failure_message">Failure Connection: %s</string>
+    <string name="failure_message">Connection Failure: %s</string>
     <string name="tv_result_height">Height: %s cm</string>
     <string name="tv_result_birthday">Birthday: %s</string>
     <string name="tv_result_gender">Gender: %s</string>
@@ -29,4 +29,7 @@
     <string name="movie_episode_id">Movie: %d</string>
     <string name="movie_release_date">Date: %s</string>
     <string name="movie_director">Director: %s</string>
+    <string name="sw_plus_title">Star Wars: %s</string>
+    <string name="appears_in_movie">This character appears in the movie!</string>
+    <string name="does_not_appear_in_movie">This character does not appear!</string>
 </resources>

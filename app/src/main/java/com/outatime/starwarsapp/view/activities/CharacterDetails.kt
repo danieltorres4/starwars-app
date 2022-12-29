@@ -61,7 +61,6 @@ class CharacterDetails : AppCompatActivity() {
 
         val call = Constants.getRetrofit().create(StarWarsApi::class.java).getCharacterDetail(characterNumber)
         val call2 = Constants.getRetrofit().create(StarWarsApi::class.java).getPlanetDetail(planetNumber)
-        //val call3 = Constants.getRetrofit().create(StarWarsApi::class.java).getFilmDetails(characterNumber)
 
         CoroutineScope(Dispatchers.IO).launch {
             call.enqueue(object: Callback<CharacterDetail> {

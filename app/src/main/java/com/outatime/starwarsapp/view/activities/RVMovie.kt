@@ -8,10 +8,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.outatime.starwarsapp.R
-import com.outatime.starwarsapp.databinding.ActivityMovieDetailsBinding
 import com.outatime.starwarsapp.databinding.ActivityRvmovieBinding
 import com.outatime.starwarsapp.model.Movie
-import com.outatime.starwarsapp.model.MovieDetail
 import com.outatime.starwarsapp.model.StarWarsApi
 import com.outatime.starwarsapp.util.Constants
 import com.outatime.starwarsapp.view.adapters.MovieAdapter
@@ -33,7 +31,6 @@ class RVMovie : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRvmovieBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //bindingMovieDetailsBinding = ActivityMovieDetailsBinding.inflate(layoutInflater)
 
         mp = MediaPlayer.create(this@RVMovie, R.raw.sw1)
         mp.start()
@@ -45,7 +42,6 @@ class RVMovie : AppCompatActivity() {
             for (m in filmEP) {
                 fN = m.substring(28,29)
                 filmNumber.add(fN)
-                println("filmNumber in RVMovie: ${filmNumber}\n")
             }
         }
 
@@ -55,10 +51,6 @@ class RVMovie : AppCompatActivity() {
             callMovie.enqueue(object: Callback<Movie> {
                 override fun onResponse(call: Call<Movie>, response: Response<Movie>) {
                     Toast.makeText(this@RVMovie, R.string.successful_message, Toast.LENGTH_SHORT).show()
-                    //Toast.makeText(this@RVMovie, response.body().toString(), Toast.LENGTH_LONG).show()
-                    //Log.d(Constants.LOGTAG, "Films: ${response.body().toString()}")
-                    //Log.d(Constants.LOGTAG, "Every character FILM NUMBER: ${filmNumber}")
-
                     binding.rvMovieMenu.layoutManager = LinearLayoutManager(this@RVMovie)
                     binding.rvMovieMenu.adapter = MovieAdapter(this@RVMovie, response.body()!!)
                     binding.pbMovieConnection.visibility = View.GONE

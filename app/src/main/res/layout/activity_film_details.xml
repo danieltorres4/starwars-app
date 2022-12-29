@@ -34,13 +34,13 @@
                     android:gravity="center_horizontal"
                     android:paddingBottom="10dp"
                     android:textColor="@color/white"
-                    android:textSize="25sp"
-                    tools:text="@string/movie_title" />
+                    android:textSize="40sp"
+                    tools:text="@string/sw_plus_title" />
 
                 <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/lavNotFound"
                     android:layout_width="wrap_content"
-                    android:layout_height="359dp"
+                    android:layout_height="290dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:visibility="visible"
@@ -51,8 +51,18 @@
                 <ImageView
                     android:id="@+id/iv_FilmImg"
                     android:layout_width="match_parent"
-                    android:layout_height="246dp"
+                    android:layout_height="389dp"
                     tools:srcCompat="@tools:sample/avatars" />
+                <TextView
+                    android:id="@+id/tvAppear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/short_stack"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    tools:text="@string/appears_in_movie" />
 
             </LinearLayout>
         </ScrollView>

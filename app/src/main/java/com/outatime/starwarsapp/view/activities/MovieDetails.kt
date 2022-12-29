@@ -51,7 +51,7 @@ class MovieDetails : AppCompatActivity() {
 
                     callMovie.enqueue(object: Callback<Movie> {
                         override fun onResponse(call: Call<Movie>, response: Response<Movie>) {
-                            Toast.makeText(this@MovieDetails, response.body().toString(), Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@MovieDetails, response.body().toString(), Toast.LENGTH_SHORT).show()
 
                             with(binding) {
                                 tvEpisodeId.text = response.body()?.results!![fN.toInt()].episode_id.toString()
@@ -59,7 +59,7 @@ class MovieDetails : AppCompatActivity() {
                         }
 
                         override fun onFailure(call: Call<Movie>, t: Throwable) {
-                            Toast.makeText(this@MovieDetails, getString(R.string.failure_message, t.message), Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@MovieDetails, getString(R.string.failure_message, t.message), Toast.LENGTH_SHORT).show()
                         }
 
                     })
