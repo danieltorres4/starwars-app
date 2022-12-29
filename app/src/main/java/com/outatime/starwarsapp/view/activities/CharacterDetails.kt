@@ -1,5 +1,6 @@
 package com.outatime.starwarsapp.view.activities
 
+import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -29,6 +30,7 @@ class CharacterDetails : AppCompatActivity() {
     private lateinit var planetRotationPeriod: String
     private lateinit var planetPopulation: String
     private lateinit var planetTerrain: String
+    private lateinit var films: ArrayList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityCharacterDetailsBinding.inflate(layoutInflater)
@@ -59,6 +61,7 @@ class CharacterDetails : AppCompatActivity() {
 
         val call = Constants.getRetrofit().create(StarWarsApi::class.java).getCharacterDetail(characterNumber)
         val call2 = Constants.getRetrofit().create(StarWarsApi::class.java).getPlanetDetail(planetNumber)
+        //val call3 = Constants.getRetrofit().create(StarWarsApi::class.java).getFilmDetails(characterNumber)
 
         CoroutineScope(Dispatchers.IO).launch {
             call.enqueue(object: Callback<CharacterDetail> {
@@ -76,6 +79,8 @@ class CharacterDetails : AppCompatActivity() {
                         tvHeightDetails.text = getString(R.string.tv_result_height, response.body()?.height)
                         tvBirthdayDetails.text = getString(R.string.tv_result_birthday, response.body()?.birthday)
                         tvGenderDetails.text = getString(R.string.tv_result_gender, response.body()?.gender)
+                        films = response.body()?.films!!
+                        tvFilmsDetails.text = getString(R.string.tv_result_films)
                     }
                 }
 
@@ -173,5 +178,17 @@ class CharacterDetails : AppCompatActivity() {
         }
 
         ad.show()
+    }
+
+    fun onClickMovie(view: View) {
+        val intent = Intent(this@CharacterDetails, RVMovie::class.java)
+        val param = Bundle()
+
+        with(binding) {
+            param.putStringArrayList("films", films)
+        }
+
+        intent.putExtras(param)
+        startActivity(intent)
     }
 }

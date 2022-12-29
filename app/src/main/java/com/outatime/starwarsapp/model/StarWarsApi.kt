@@ -23,5 +23,8 @@ interface StarWarsApi {
     fun getFilms(): Call<Movie>
 
     @GET("api/films/{filmCount}")
-    fun getFilmDetails(@Path("filmCount") count: Int?): Call<Movie>
+    fun getFilmDetails(@Path("filmCount") filmCount: String?): Call<MovieDetail>
+
+    @GET("cm2023-1/{filmId}")
+    fun getFilmImg(@Path("filmId") filmId: String?): Call<MovieImage>
 }

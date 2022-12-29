@@ -3,12 +3,13 @@ package com.outatime.starwarsapp.model
 import com.google.gson.annotations.SerializedName
 
 data class Movie(
-    @SerializedName("count")
-    var count: Int? = null,
+    val count: Int,
+    val results: ArrayList<MovieResults>
+)
 
-    @SerializedName("title")
-    var title: String? = null,
-
-    @SerializedName("image")
-    var image: String? = null
+data class MovieResults(
+    val episode_id: Int,
+    val title: String,
+    val director: String,
+    val release_date: String
 )

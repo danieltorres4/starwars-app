@@ -117,7 +117,8 @@
                     android:paddingBottom="10dp"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    tools:text="@string/films_hint" />
+                    tools:text="@string/films_hint"
+                    android:onClick="onClickMovie"/>
             </LinearLayout>
         </ScrollView>
 

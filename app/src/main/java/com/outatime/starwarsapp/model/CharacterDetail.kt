@@ -13,5 +13,8 @@ data class CharacterDetail(
     var birthday: String? = null,
 
     @SerializedName("gender")
-    var gender: String? = null
+    var gender: String? = null,
+
+    @SerializedName("films")
+    var films: ArrayList<String>? = null
 )
